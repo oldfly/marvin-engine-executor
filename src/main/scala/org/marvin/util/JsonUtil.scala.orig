@@ -18,7 +18,10 @@ package org.marvin.util
 
 import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper}
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
+<<<<<<< HEAD
+=======
 import grizzled.slf4j.Logging
+>>>>>>> daaea0de5a60fe2e976dec1b207b923d405fcda0
 import org.everit.json.schema.ValidationException
 import org.everit.json.schema.loader.SchemaLoader
 import org.json.{JSONObject, JSONTokener}
@@ -60,7 +63,11 @@ object JsonUtil extends Logging {
     try{
       jsonSchema = new JSONObject(new JSONTokener(getClass.getResourceAsStream(schemaName)))
     } catch {
+<<<<<<< HEAD
+      case e: NullPointerException => println(s"File ${schemaName} not found, check your schema file")
+=======
       case e: NullPointerException => info(s"File ${schemaName} not found, check your schema file")
+>>>>>>> daaea0de5a60fe2e976dec1b207b923d405fcda0
         throw e
     }
 
@@ -71,6 +78,10 @@ object JsonUtil extends Logging {
     } catch {
       case e: ValidationException =>
         e.printStackTrace()
+<<<<<<< HEAD
+        e.getCausingExceptions.stream().forEach(println)
+=======
+>>>>>>> daaea0de5a60fe2e976dec1b207b923d405fcda0
         throw e
     }
   }

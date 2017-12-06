@@ -3,7 +3,11 @@
     "version": "v0.0.1",
     "engineType": "python",
     "artifactsRemotePath": "/tmp/marvin",
+<<<<<<< HEAD
+    "artifactManagerType": "S3",
+=======
     "artifactManagerType": "fs",
+>>>>>>> daaea0de5a60fe2e976dec1b207b923d405fcda0
     "s3BucketName": "marvin-artifact-bucket",
     "reloadTimeout": 600000,
     "batchActionTimeout": 600000,
